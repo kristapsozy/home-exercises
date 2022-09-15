@@ -2,7 +2,7 @@ package io.codelex.arithmetic.practice;
 
 public class TwoNumbers {
     static void twoNumbersSumOrDifferenceIsFifteen(int x, int y) {
-        if ((x | y) == 15 | (x + y) == 15 | Math.abs(x-y) == 15) {
+        if (x == 15 || y == 15 || Math.abs(x-y) == 15) {
             System.out.println(true);
         } else {
             System.out.println(false);
@@ -10,6 +10,6 @@ public class TwoNumbers {
     }
 
     public static void main(String[] args) {
-        twoNumbersSumOrDifferenceIsFifteen(30,45);
+        twoNumbersSumOrDifferenceIsFifteen(15,45);
     }
 }
