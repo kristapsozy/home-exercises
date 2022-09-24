@@ -7,6 +7,7 @@ public class TicTacToe {
     private static char[][] board = new char[3][3];
     public static char winner = ' ';
 
+
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
         int count = 0;

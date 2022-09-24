@@ -3,30 +3,21 @@ package io.codelex.classesandobjects.practice.videostore;
 import java.util.ArrayList;
 
 public class VideoStore {
-    ArrayList<Video> videos = new ArrayList<>(10);
-    int videoCount;
-
-    public VideoStore() {
-        //this.videos = new ArrayList<>();
-        //  videos.add(new Video(""));
-        //  videos.add(new Video(""));
-        //  videos.add(new Video(""));
-        //  videos.add(new Video(""));
-        //  videos.add(new Video(""));
-    }
+    ArrayList<Video> videos = new ArrayList<>();
+    ArrayList<Video> rentedVideos = new ArrayList<>();
 
     public void addVideo(String movieName) {
-        this.videoCount++;
         this.videos.add(new Video(movieName));
     }
 
     public void checkOutVideo(Video video) {
-        videoCount--;
-        videos.remove(video.title);
+        videos.remove(video);
+        rentedVideos.add(video);
     }
 
     public void returnCheckedOutVideo(Video video) {
-        videoCount++;
+        rentedVideos.remove(video);
+        videos.add(video);
     }
 
     public ArrayList<Video> getVideos() {
@@ -37,17 +28,18 @@ public class VideoStore {
         this.videos = videos;
     }
 
-    public int getVideoCount() {
-        return videoCount;
+    public void takeUserRating(Video video, int rating) {
+        video.getRating(rating);
+
     }
 
-    public void setVideoCount(int videoCount) {
-        this.videoCount = videoCount;
-    }
-
-    public static void takeUserRating(int rating) {
-
-
+    public int searchVideoByTitle(String title) {
+        for (Video video : videos) {
+            if (video.title.equals(title)) {
+                return videos.indexOf(video);
+            }
+        }
+        return 0;
     }
 
 }

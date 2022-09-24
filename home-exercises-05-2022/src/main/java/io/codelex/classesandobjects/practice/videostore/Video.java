@@ -1,22 +1,25 @@
 package io.codelex.classesandobjects.practice.videostore;
 
+import java.util.Objects;
+
 public class Video {
     String title;
-    static boolean isCheckedOut;
-    static double averageUserRating;
+    boolean isCheckedOut;
+    double averageUserRating;
 
-    static int totalRatingCount;
-    static double totalRating;
+    int totalRatingCount;
+    double totalRating;
 
     public Video(String title) {
+        isCheckedOut = false;
         this.title = title;
     }
 
-    public static void beeingCheckedOut() {
+    public void beeingCheckedOut() {
         isCheckedOut = true;
     }
 
-    public static void getRating(double rating) {
+    public void getRating(double rating) {
         totalRatingCount++;
         totalRating += rating;
         averageUserRating = totalRating / totalRatingCount;
@@ -66,10 +69,24 @@ public class Video {
         this.totalRating = totalRating;
     }
 
-    @Override
     public String toString() {
         return "Video{" +
                 "title='" + title + '\'' +
+                ", isCheckedOut=" + isCheckedOut +
+                ", averageUserRating=" + averageUserRating +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Video video = (Video) o;
+        return isCheckedOut == video.isCheckedOut && Double.compare(video.averageUserRating, averageUserRating) == 0 && totalRatingCount == video.totalRatingCount && Double.compare(video.totalRating, totalRating) == 0 && title.equals(video.title);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(title, isCheckedOut, averageUserRating, totalRatingCount, totalRating);
     }
 }
