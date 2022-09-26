@@ -12,18 +12,18 @@ public class TenBillion {
         long n = in.nextLong();
 
         //todo - check if Long
-        if (n <= Math.pow(2, 63) & n >= Math.pow(-2,63)) {
+        if (n >= Long.MIN_VALUE && n <= Long.MAX_VALUE) {
             //todo - check if n is less than zero
-            if (n<0) {
+            if (n < 0) {
                 n *= -1;
             }
             //fixme
-            if (n >= 10000000000L ) {
+            if (n >= 10000000000L) {
                 System.out.println("Number is greater or equals 10,000,000,000!");
             } else {
                 int digits = 0;
-                while(n != 0) {
-                    n/=10;
+                while (n != 0) {
+                    n /= 10;
                     digits++;
                 }
                 System.out.println("Number of digits in the number: " + digits);
