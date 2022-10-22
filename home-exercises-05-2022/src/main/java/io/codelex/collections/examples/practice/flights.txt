@@ -1,0 +1,23 @@
+New York->Anchorage
+Riga->Helsinki
+Tallin->Praga
+
+Frankfurt->Athens
+Warsaw->Riga
+Milan->Budapest
+Oslo->Stockolm
+Bilbao->Amsterdam
+Oslo->New York
+New York->Tallin
+Tallin->Bilbao
+
+Warsaw->Praga
+Praga->Milan
+Milan->Anchorage
+Anchorage->Frankfurt
+Frankfurt->Amsterdam
+Oslo->Warsaw
+Amsterdam->Oslo
+Athens->Praga
+Budapest->Athens
+Helsinki->Warsaw
