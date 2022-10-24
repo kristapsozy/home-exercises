@@ -3,9 +3,9 @@ package io.codelex.classesandobjects.practice.movie;
 import java.util.ArrayList;
 
 public class Movie {
-    String title;
-    String studio;
-    String rating = "PG";
+    private String title;
+    private String studio;
+    private String rating = "PG";
 
     public Movie(String title, String studio, String rating) {
         this.title = title;

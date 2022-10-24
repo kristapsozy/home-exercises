@@ -3,12 +3,12 @@ package io.codelex.classesandobjects.practice.videostore;
 import java.util.Objects;
 
 public class Video {
-    String title;
-    boolean isCheckedOut;
-    double averageUserRating;
+    private String title;
+    private boolean isCheckedOut;
+    private double averageUserRating;
 
-    int totalRatingCount;
-    double totalRating;
+    private int totalRatingCount;
+    private double totalRating;
 
     public Video(String title) {
         isCheckedOut = false;
@@ -82,7 +82,11 @@ public class Video {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Video video = (Video) o;
-        return isCheckedOut == video.isCheckedOut && Double.compare(video.averageUserRating, averageUserRating) == 0 && totalRatingCount == video.totalRatingCount && Double.compare(video.totalRating, totalRating) == 0 && title.equals(video.title);
+        return isCheckedOut == video.isCheckedOut
+                && Double.compare(video.averageUserRating, averageUserRating) == 0
+                && totalRatingCount == video.totalRatingCount
+                && Double.compare(video.totalRating, totalRating) == 0
+                && title.equals(video.title);
     }
 
     @Override

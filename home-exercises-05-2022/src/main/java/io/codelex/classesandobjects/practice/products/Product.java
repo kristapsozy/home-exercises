@@ -1,8 +1,8 @@
 package io.codelex.classesandobjects.practice.products;
 
 public class Product {
-    String name;
-    double priceAtStart;
+    private String name;
+    private double priceAtStart;
 
     public String getName() {
         return name;

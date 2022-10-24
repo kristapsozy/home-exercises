@@ -20,10 +20,10 @@ public class SavingsAccountTest {
             account.withdrawal(in.nextDouble());
             account.addingMonthlyInterestRates();
         }
-        System.out.printf("Total deposited: $%.2f", account.totalDeposit);
-        System.out.printf("Total withdrawn: $%.2f", account.totalWithdrawal);
-        System.out.printf("Total Interest earned: $%.2f", account.totalInterestEarned);
-        System.out.printf("Ending balance: $%.2f", account.savingsAccountBalance);
+        System.out.printf("Total deposited: $%.2f", account.getTotalDeposit());
+        System.out.printf("Total withdrawn: $%.2f", account.getTotalWithdrawal());
+        System.out.printf("Total Interest earned: $%.2f", account.getTotalInterestEarned());
+        System.out.printf("Ending balance: $%.2f", account.getSavingsAccountBalance());
 
 
     }

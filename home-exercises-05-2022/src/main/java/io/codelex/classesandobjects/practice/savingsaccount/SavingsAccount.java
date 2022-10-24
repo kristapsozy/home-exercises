@@ -1,11 +1,11 @@
 package io.codelex.classesandobjects.practice.savingsaccount;
 
 public class SavingsAccount {
-    double annualInterestRates;
-    double savingsAccountBalance;
-    double totalDeposit;
-    double totalWithdrawal;
-    double totalInterestEarned;
+    private double annualInterestRates;
+    private double savingsAccountBalance;
+    private double totalDeposit;
+    private double totalWithdrawal;
+    private double totalInterestEarned;
 
     public SavingsAccount(double savingsAccountBalance) {
         this.savingsAccountBalance = savingsAccountBalance;
@@ -40,6 +40,18 @@ public class SavingsAccount {
 
     public void setSavingsAccountBalance(double savingsAccountBalance) {
         this.savingsAccountBalance = savingsAccountBalance;
+    }
+
+    public double getTotalDeposit() {
+        return totalDeposit;
+    }
+
+    public double getTotalWithdrawal() {
+        return totalWithdrawal;
+    }
+
+    public double getTotalInterestEarned() {
+        return totalInterestEarned;
     }
 }
 

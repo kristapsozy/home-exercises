@@ -1,8 +1,8 @@
 package io.codelex.classesandobjects.practice.points;
 
 public class Point {
-    int x;
-    int y;
+    private int x;
+    private int y;
 
     public Point(int x, int y) {
         this.x = x;
@@ -13,5 +13,13 @@ public class Point {
         int p1x = p1.x;
         p1.x = p2.x;
         p2.x = p1x;
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
     }
 }

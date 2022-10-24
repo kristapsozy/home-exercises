@@ -1,9 +1,11 @@
 package io.codelex.classesandobjects.practice.cars;
 
 public class Car {
-    double startKilometers;
-    double endKilometers;
-    double liters;
+    private double startKilometers;
+    private double endKilometers;
+    private double liters;
+    private static final double HIGH_CONSUMPTION = 15.00;
+    private static final double LOW_CONSUMPTION = 5.00;
 
     public double getStartKilometers() {
         return startKilometers;
@@ -41,11 +43,11 @@ public class Car {
     }
 
     public boolean gasHog() {
-        return calculateConsumption() > 15.00;
+        return calculateConsumption() > HIGH_CONSUMPTION;
     }
 
     public boolean economyCar() {
-        return calculateConsumption() < 5.00;
+        return calculateConsumption() < LOW_CONSUMPTION;
     }
 
     public void fillUp(int mileage, double liters) {

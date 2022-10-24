@@ -6,12 +6,12 @@ public class FuelGaugeTest {
         FuelGauge fuelGauge = new FuelGauge(10);
         int count = 0;
 
-        while (fuelGauge.fuel < 70) {
+        while (fuelGauge.getFuel() < 70) {
             fuelGauge.addingFuel();
         }
         fuelGauge.currentFuelAmount();
 
-        while (fuelGauge.fuel > 0) {
+        while (fuelGauge.getFuel() > 0) {
             odometer.incrementingOdometer();
             count++;
             if (count % 10 == 0) {

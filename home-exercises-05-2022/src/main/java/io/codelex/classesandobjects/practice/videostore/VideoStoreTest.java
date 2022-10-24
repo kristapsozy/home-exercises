@@ -53,7 +53,7 @@ public class VideoStoreTest {
             System.out.println("Enter rating");
             int rating = scanner.nextInt();
             videoStore.addVideo(movieName);
-            videoStore.takeUserRating(videoStore.videos.get(videoStore.searchVideoByTitle(movieName)), rating);
+            videoStore.takeUserRating(videoStore.getVideos().get(videoStore.searchVideoByTitle(movieName)), rating);
 
         }
     }
@@ -61,17 +61,17 @@ public class VideoStoreTest {
     private static void rentVideo(Scanner scanner) {
         System.out.println("Enter movie name");
         String movieName = scanner.next();
-        videoStore.checkOutVideo(videoStore.videos.get(videoStore.searchVideoByTitle(movieName)));
+        videoStore.checkOutVideo(videoStore.getVideos().get(videoStore.searchVideoByTitle(movieName)));
     }
 
     private static void returnVideo(Scanner scanner) {
         System.out.println("Enter movie name");
         String movieName = scanner.next();
-        videoStore.returnCheckedOutVideo(videoStore.videos.get(videoStore.searchVideoByTitle(movieName)));
+        videoStore.returnCheckedOutVideo(videoStore.getVideos().get(videoStore.searchVideoByTitle(movieName)));
     }
 
     private static void printInventory() {
-        for (Video video : videoStore.videos) {
+        for (Video video : videoStore.getVideos()) {
             System.out.println(video.toString());
         }
     }
@@ -81,6 +81,6 @@ public class VideoStoreTest {
         String movieName = scanner.next();
         System.out.println("Enter rating");
         int rating = scanner.nextInt();
-        videoStore.takeUserRating(videoStore.videos.get(videoStore.searchVideoByTitle(movieName)), rating);
+        videoStore.takeUserRating(videoStore.getVideos().get(videoStore.searchVideoByTitle(movieName)), rating);
     }
 }

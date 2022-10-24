@@ -1,10 +1,10 @@
 package io.codelex.classesandobjects.practice.dog;
 
 public class Dog {
-    String name;
-    String sex;
-    String mother;
-    String father;
+    private String name;
+    private String sex;
+    private String mother;
+    private String father;
 
     @Override
     public String toString() {

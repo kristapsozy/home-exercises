@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class GuessingGame {
     private static Random ran;
+    public static final int MOVE_LIMIT = 12;
 
     public static void main(String[] args) {
         String words[] = {"target", "game", "resources", "practise"};
@@ -40,7 +41,7 @@ public class GuessingGame {
                 break;
             }
             count++;
-            if (count == 12) {
+            if (count == MOVE_LIMIT) {
                 System.out.println("You lost!");
                 break;
             }

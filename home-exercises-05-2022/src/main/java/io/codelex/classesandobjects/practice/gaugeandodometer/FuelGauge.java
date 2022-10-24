@@ -2,7 +2,7 @@ package io.codelex.classesandobjects.practice.gaugeandodometer;
 
 public class FuelGauge {
 
-    double fuel;
+    private double fuel;
 
     FuelGauge(double fuel) {
         this.fuel = fuel;

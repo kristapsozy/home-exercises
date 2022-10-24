@@ -4,8 +4,8 @@ package io.codelex.classesandobjects.practice.bankaccount;
 // information including name and balance of money.
 
 public class BankAccount {
-    public String name;
-    public double balance;
+    private String name;
+    private double balance;
 
     public final void deposit(double amount) {
         //todo

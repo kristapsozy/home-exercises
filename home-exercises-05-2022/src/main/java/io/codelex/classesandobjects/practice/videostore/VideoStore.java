@@ -3,8 +3,8 @@ package io.codelex.classesandobjects.practice.videostore;
 import java.util.ArrayList;
 
 public class VideoStore {
-    ArrayList<Video> videos = new ArrayList<>();
-    ArrayList<Video> rentedVideos = new ArrayList<>();
+    private ArrayList<Video> videos = new ArrayList<>();
+    private ArrayList<Video> rentedVideos = new ArrayList<>();
 
     public void addVideo(String movieName) {
         this.videos.add(new Video(movieName));
@@ -35,11 +35,14 @@ public class VideoStore {
 
     public int searchVideoByTitle(String title) {
         for (Video video : videos) {
-            if (video.title.equals(title)) {
+            if (video.getTitle().equals(title)) {
                 return videos.indexOf(video);
             }
         }
         return 0;
     }
 
+    public ArrayList<Video> getRentedVideos() {
+        return rentedVideos;
+    }
 }
